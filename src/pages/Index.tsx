@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Spotlight } from '@/components/ui/spotlight';
 import { useTheme } from "next-themes";
+import { GlareCard } from '@/components/ui/glare-card';
 
 
 // Updated Spotlight Component with light/dark mode support
@@ -347,10 +348,17 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="text-center space-y-3 p-4 md:p-6 rounded-xl bg-card border border-border hover:border-primary/20 dark:hover:border-primary/30 transition-colors duration-300 group"
+              className="relative z-0 text-center space-y-3 p-4 md:p-6 rounded-xl group transition-all duration-300
+              bg-background/40 dark:bg-neutral-900/30 bg-clip-padding backdrop-blur-md supports-[backdrop-filter]:backdrop-blur-xl
+              border border-white/30 dark:border-white/10 ring-1 ring-inset ring-white/10 dark:ring-white/5
+              hover:border-primary/40 dark:hover:border-primary/50 hover:ring-primary/30 shadow-sm hover:shadow-lg
+              before:content-[''] before:absolute before:inset-0 before:rounded-xl before:-z-10
+              before:bg-[radial-gradient(closest-side,hsl(var(--primary)/.35),transparent)] before:opacity-0 group-hover:before:opacity-100 before:blur-xl before:transition-opacity"
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
-                <stat.icon className="h-6 w-6 text-primary" />
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg mx-auto mb-3
+                bg-primary/10 dark:bg-primary/15 backdrop-blur-sm border border-white/30 dark:border-white/10
+                ring-0 group-hover:ring-2 ring-primary/30 transition-all">
+                <stat.icon className="h-6 w-6 text-primary group-hover:scale-110 transition-transform drop-shadow-[0_0_6px_hsl(var(--primary)/0.5)]" />
               </div>
               <CountUp
                 {...parseNumberParts(stat.number)}
@@ -402,6 +410,7 @@ const Index = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {programs.map((program, index) => (
+            
             <motion.div
               key={program.name}
               initial={{ opacity: 0, y: 20 }}
@@ -410,7 +419,8 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="group"
             >
-              <Card className={`p-1 h-full bg-gradient-to-br ${program.color} overflow-hidden transition-all duration-500 hover:shadow-xl`}>
+            <GlareCard>
+              <Card className={`p-1 min-w-fit h-full bg-gradient-to-br ${program.color} overflow-hidden transition-all duration-500 hover:shadow-xl`}>
                 <div className={`flex flex-col h-full bg-card/80 dark:bg-card/90 backdrop-blur-sm rounded-[11px] p-6 border ${program.borderColor}`}>
                   <div className="mb-6">
                     <div className={`inline-flex items-center rounded-full ${program.bgColor} ${program.textColor} px-3 py-1 text-xs font-medium mb-4`}>
@@ -440,7 +450,9 @@ const Index = () => {
                   </Button>
                 </div>
               </Card>
+            </GlareCard>
             </motion.div>
+
           ))}
         </div>
       </ContentSection>

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Globe, Users, TrendingUp, Award, Heart, ArrowRight, Rocket, Target, Zap, ChevronRight, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import MagicBorderButton from '@/components/ui/magic-border-button';
+import HoverBorderGradientButton from '@/components/ui/hover-border-gradient-button';
 import { Card } from '@/components/ui/card';
 import { ContentSection } from '@/components/layout/content-section';
 import { trackCTAClick } from '@/lib/analytics';
@@ -302,22 +304,21 @@ const Index = () => {
               transition={{ delay: 0.7, duration: 0.7 }}
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
             >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-300 group px-8 py-6 text-base"
+              <MagicBorderButton
                 onClick={() => trackCTAClick('apply_now', 'primary', '/')}
+                className="h-12"
+                innerClassName="bg-primary text-primary-foreground px-8 py-6 text-base group"
               >
                 Apply Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-accent/10 text-foreground px-8 py-6 text-base"
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </MagicBorderButton>
+              <HoverBorderGradientButton
                 onClick={() => trackCTAClick('view_programs', 'secondary', '/')}
+                className="h-12"
+                innerClassName="px-8 py-6 text-base"
               >
                 View Programs
-              </Button>
+              </HoverBorderGradientButton>
             </motion.div>
 
             <motion.div
@@ -483,22 +484,21 @@ const Index = () => {
               Join the next cohort of innovative startups and transform your idea into a successful business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button
-                size="lg"
-                className="bg-background text-foreground hover:bg-background/90 shadow-md hover:shadow-lg transition-all duration-300 group"
+              <MagicBorderButton
                 onClick={() => trackCTAClick('apply_now', 'cta_section', '/')}
+                className="h-12"
+                innerClassName="bg-background text-foreground px-6 py-3 text-base group"
               >
                 Apply Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-primary-foreground/5"
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </MagicBorderButton>
+              <HoverBorderGradientButton
                 onClick={() => trackCTAClick('schedule_call', 'cta_section', '/')}
+                className="h-12"
+                innerClassName="text-primary-foreground px-6 py-3 text-base"
               >
                 Schedule a Call
-              </Button>
+              </HoverBorderGradientButton>
             </div>
           </div>
         </motion.div>

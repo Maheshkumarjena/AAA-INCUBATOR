@@ -20,7 +20,7 @@ export function TopNavigation() {
       <div className="flex h-16 items-center px-6 gap-4">
         <SidebarTrigger className="md:hidden" />
         
-        <div className="flex items-center flex-1 space-x-4">
+        <div className="flex items-center w-full flex-row justify-between space-x-4">
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />

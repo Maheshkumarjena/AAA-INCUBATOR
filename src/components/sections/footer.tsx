@@ -29,7 +29,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Rocket className="h-8 w-8 text-accent" />
-              <span className="text-2xl font-bold">InnovateHub</span>
+              <span className="text-2xl font-bold">AAA INCUBATOR</span>
             </div>
             <p className="text-primary-foreground/80 max-w-xs">
               Empowering the next generation of global innovators through 
@@ -86,7 +86,7 @@ export function Footer() {
               <div className="space-y-2 text-sm text-primary-foreground/80">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>hello@innovatehub.com</span>
+                  <span>hello@AAA INCUBATOR.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-          <p>&copy; 2024 InnovateHub. All rights reserved.</p>
+          <p>&copy; 2024 AAA INCUBATOR. All rights reserved.</p>
         </div>
       </div>
     </footer>

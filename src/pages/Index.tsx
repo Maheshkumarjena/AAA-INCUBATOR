@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Globe, Users, TrendingUp, Award, Heart, ArrowRight, Rocket, Target, Zap, ChevronRight, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { PageHeader } from '@/components/layout/page-header';
+// import { PageHeader } from '@/components/layout/page-header';
 import { ContentSection } from '@/components/layout/content-section';
 import { trackCTAClick } from '@/lib/analytics';
 import { useEffect, useRef, useState } from 'react';
@@ -47,33 +47,33 @@ const programs = [
   {
     name: 'Pre-Seed',
     duration: '12 weeks',
-    color: 'from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700',
-    borderColor: 'border-blue-200 dark:border-blue-800',
-    textColor: 'text-blue-700 dark:text-blue-300',
+    color: 'from-blue-50/70 to-blue-100/70 dark:from-blue-600 dark:to-blue-700',
+    borderColor: 'border-blue-50 dark:border-blue-800',
+    textColor: 'text-blue-600 dark:text-blue-300',
     bgColor: 'bg-blue-50 dark:bg-blue-950/30',
-    iconColor: 'text-blue-600 dark:text-blue-400',
+    iconColor: 'text-blue-500 dark:text-blue-400',
     description: 'Transform your idea into a viable business model',
     highlights: ['Market validation', 'MVP development', 'Team building']
   },
   {
     name: 'Seed',
     duration: '16 weeks',
-    color: 'from-purple-500 to-purple-600 dark:from-purple-600 dark:to-purple-700',
-    borderColor: 'border-purple-200 dark:border-purple-800',
-    textColor: 'text-purple-700 dark:text-purple-300',
+    color: 'from-purple-50/70 to-purple-100/70 dark:from-purple-600 dark:to-purple-700',
+    borderColor: 'border-purple-50 dark:border-purple-800',
+    textColor: 'text-purple-600 dark:text-purple-300',
     bgColor: 'bg-purple-50 dark:bg-purple-950/30',
-    iconColor: 'text-purple-600 dark:text-purple-400',
+    iconColor: 'text-purple-500 dark:text-purple-400',
     description: 'Scale your validated concept into a growing business',
     highlights: ['Product-market fit', 'Go-to-market strategy', 'First customers']
   },
   {
     name: 'Scale-Up',
     duration: '20 weeks',
-    color: 'from-amber-500 to-amber-600 dark:from-amber-600 dark:to-amber-700',
-    borderColor: 'border-amber-200 dark:border-amber-800',
-    textColor: 'text-amber-700 dark:text-amber-300',
+    color: 'from-amber-50/70 to-amber-100/70 dark:from-amber-600 dark:to-amber-700',
+    borderColor: 'border-amber-50 dark:border-amber-800',
+    textColor: 'text-amber-600 dark:text-amber-300',
     bgColor: 'bg-amber-50 dark:bg-amber-950/30',
-    iconColor: 'text-amber-600 dark:text-amber-400',
+    iconColor: 'text-amber-500 dark:text-amber-400',
     description: 'Accelerate growth and prepare for major funding rounds',
     highlights: ['Revenue optimization', 'Series A prep', 'International expansion']
   }
@@ -82,18 +82,23 @@ const programs = [
 // Spotlight Component
 
 
-// Full-Width Grid Pattern Background - UPDATED
+// Updated FullWidthGridPattern Component with fade effect
+// Enhanced FullWidthGridPattern with better blending
 const FullWidthGridPattern = () => {
   return (
     <div className="absolute inset-0 z-0 w-screen h-full overflow-hidden">
       <div
-        className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+        className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_30%,transparent_70%)] dark:bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] opacity-50"
         style={{
           left: '50%',
           transform: 'translateX(-50%)',
           width: '105vw'
         }}
       />
+      
+      {/* Additional gradient overlays for seamless blending */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/90 opacity-70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/90 opacity-70" />
     </div>
   );
 };
@@ -202,10 +207,13 @@ const CountUp: React.FC<CountUpProps> = ({ end, duration = 1500, prefix = '', su
 
 const Index = () => {
   return (
-    <div className=" pb-10 relative overflow-hidden">
+    <div className=" pb-10 absolute p-8 top-0 overflow-hidden">
       <Spotlightt />
       <Spotlight />
 
+
+
+    
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -221,7 +229,7 @@ const Index = () => {
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
 
-        <div className="container relative mt-20 z-10 px-4 md:px-6">
+        <div className="container relative mt-32 z-10 px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -330,7 +338,7 @@ const Index = () => {
 
       {/* Why Choose Us */}
       <ContentSection
-        title="Why InnovateHub?"
+        title="Why AAA INCUBATOR?"
         description="We provide everything you need to transform your startup idea into a thriving business"
         className="max-w-full  mx-auto mt-24"
       >

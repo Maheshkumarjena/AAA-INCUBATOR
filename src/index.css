@@ -4,6 +4,29 @@
 
 /* @import "tailwindcss"; */
 
+:root {
+  --spotlight-default: white;
+  --spotlight-opacity-value: 0.21;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --spotlight-default: black;
+    --spotlight-opacity-value: 0.08;
+  }
+}
+
+/* If you're using a class-based theme system */
+.light {
+  --spotlight-default: black;
+  --spotlight-opacity-value: 0.08;
+}
+
+.dark {
+  --spotlight-default: white;
+  --spotlight-opacity-value: 0.21;
+}
+
 @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }

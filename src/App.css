@@ -5,6 +5,29 @@
   text-align: center;
 }
 
+:root {
+  --spotlight-default: white;
+  --spotlight-opacity-value: 0.21;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --spotlight-default: black;
+    --spotlight-opacity-value: 0.08;
+  }
+}
+
+/* If you're using a class-based theme system */
+.light {
+  --spotlight-default: black;
+  --spotlight-opacity-value: 0.08;
+}
+
+.dark {
+  --spotlight-default: white;
+  --spotlight-opacity-value: 0.21;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

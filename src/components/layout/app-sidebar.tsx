@@ -26,7 +26,6 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { cn } from '@/lib/utils';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 const mainNavItems = [
   { title: 'Home', url: '/', icon: Home },
@@ -74,7 +73,7 @@ export function AppSidebar() {
       'border-r transition-all duration-300',
       collapsed ? 'w-16' : 'w-64'
     )}>
-      <SidebarHeader className="border-b p-4">
+      <SidebarHeader className="border-b  p-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded-lg">
@@ -82,12 +81,11 @@ export function AppSidebar() {
             </div>
             {!collapsed && (
               <div>
-                <h2 className="font-bold text-lg text-primary">AAA INCUBATOR</h2>
+                <h2 className="font-bold text-md text-primary">AAA INCUBATOR</h2>
                 <p className="text-xs text-muted-foreground">Startup Accelerator</p>
               </div>
             )}
           </div>
-          <ThemeToggle />
         </div>
       </SidebarHeader>
 

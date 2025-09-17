@@ -2,12 +2,80 @@ import { motion } from 'framer-motion';
 import { Globe, Users, TrendingUp, Award, Heart, ArrowRight, Rocket, Target, Zap, ChevronRight, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-// import { PageHeader } from '@/components/layout/page-header';
 import { ContentSection } from '@/components/layout/content-section';
 import { trackCTAClick } from '@/lib/analytics';
 import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 import { Spotlight } from '@/components/ui/spotlight';
+import { useTheme } from "next-themes";
 
+
+// Updated Spotlight Component with light/dark mode support
+type SpotlightProps = {
+  className?: string;
+  fill?: string;
+};
+
+const ThemedSpotlight = ({ className, fill }) => {
+  const { theme } = useTheme();
+  const isLightMode = theme === "light";
+  
+  return (
+    <Spotlight 
+      className={className} 
+      fill={fill} 
+      lightMode={isLightMode} 
+    />
+  );
+};
+
+// Mouse-following spotlight component
+const MouseSpotlight = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div
+      className="pointer-events-none bg-pink-600 fixed inset-0 z-30 transition-opacity duration-300 opacity-0 md:opacity-100"
+      style={{
+        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(99, 102, 241, 0.1), transparent 40%)`,
+      }}
+    />
+  );
+};
+
+// Updated FullWidthGridPattern with better theme support
+const FullWidthGridPattern = () => {
+  return (
+    <div className="absolute inset-0 z-0 w-screen h-full overflow-hidden">
+      <div
+        className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#d1d1d1_1px,transparent_1px),linear-gradient(to_bottom,#d1d1d1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_15%,transparent_65%)] 
+                  dark:bg-[linear-gradient(to_right,#404040_1px,transparent_1px),linear-gradient(to_bottom,#404040_1px,transparent_1px)] opacity-60 transition-opacity duration-300"
+        style={{
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '105vw'
+        }}
+      />
+      
+      {/* Additional gradient overlays for seamless blending */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/90 opacity-70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/90 opacity-70" />
+    </div>
+  );
+};
+// Stats data
 const stats = [
   { number: '200+', label: 'Startups Accelerated', icon: Rocket },
   { number: '85%', label: 'Success Rate', icon: Target },
@@ -79,62 +147,10 @@ const programs = [
   }
 ];
 
-// Spotlight Component
-
-
-// Updated FullWidthGridPattern Component with fade effect
-// Enhanced FullWidthGridPattern with better blending
-const FullWidthGridPattern = () => {
-  return (
-    <div className="absolute inset-0 z-0 w-screen h-full overflow-hidden">
-      <div
-        className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_30%,transparent_70%)] dark:bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] opacity-50"
-        style={{
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '105vw'
-        }}
-      />
-      
-      {/* Additional gradient overlays for seamless blending */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/90 opacity-70" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/90 opacity-70" />
-    </div>
-  );
-};
-
-
-
-// Spotlight Component
-const Spotlightt = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  return (
-    <div
-      className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300 opacity-0 md:opacity-100"
-      style={{
-        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(99, 102, 241, 0.1), transparent 40%)`,
-      }}
-    />
-  );
-};
-
-// --- CountUp on view component ---
+// CountUp component
 interface CountUpProps {
   end: number;
-  duration?: number; // ms
+  duration?: number;
   prefix?: string;
   suffix?: string;
   className?: string;
@@ -206,36 +222,43 @@ const CountUp: React.FC<CountUpProps> = ({ end, duration = 1500, prefix = '', su
 };
 
 const Index = () => {
+  const { theme } = useTheme();
+  const isLightMode = theme === "light";
   return (
-    <div className=" pb-10 absolute p-8 top-0 overflow-hidden">
-      <Spotlightt />
-      <Spotlight />
+    <div className="pb-10 relative p-8 top-0 overflow-hidden">
+      <div className="fixed inset-0 z-0">
+        <MouseSpotlight />
+        <MouseSpotlight />
 
-
-
-    
+        <Spotlight className="-top-40 left-0 md:-top-[400px] md:left-60" fill={isLightMode ? "black" : "white"} lightMode={isLightMode} />
+        
+        <Spotlight className="" fill={isLightMode ? "black" : "white"} lightMode={isLightMode} />
+        <FullWidthGridPattern />
+        
+        {/* Animated background elements */}
+        <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
+      </div>
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 dark:from-primary/10 dark:via-background dark:to-accent/10" />
 
         {/* Full-Width Grid Pattern Background */}
-        <FullWidthGridPattern />
-        <Spotlight
-          className="-top-40 left-0 md:-top-20 md:left-60"
-          fill="white"
-        />
+        {/* <FullWidthGridPattern /> */}
+        
         {/* Animated background elements */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
 
-        <div className="container relative mt-32 z-10 px-4 md:px-6">
+        <div className="container relative mt-4 sm:mt-8 md:mt-12 z-10 px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center space-y-8 max-w-4xl mx-auto"
           >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -253,7 +276,7 @@ const Index = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             >
               Accelerate Your
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent block mt-2">
+               <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-primary dark:to-accent bg-clip-text text-transparent block mt-2">
                 Startup Journey
               </span>
             </motion.h1>
@@ -310,10 +333,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rest of the content remains the same */}
       {/* Stats Section */}
-      <ContentSection className='mt-28'>
-        <div className="grid grid-cols-2   md:grid-cols-4 gap-4 md:gap-6">
+      <ContentSection className='mt-4 sm:mt-8 md:mt-12'>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -338,9 +360,9 @@ const Index = () => {
 
       {/* Why Choose Us */}
       <ContentSection
-        title="Why AAA INCUBATOR?"
+        title="Why InnovateHub?"
         description="We provide everything you need to transform your startup idea into a thriving business"
-        className="max-w-full  mx-auto mt-24"
+        className="relative z-10 isolate max-w-full mx-auto mt-16 md:mt-24"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {edges.map((edge, index) => (
@@ -352,7 +374,7 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               className={index === 4 ? "md:col-span-2 lg:col-span-1" : ""}
             >
-              <Card className="p-6 h-full transition-all duration-300 hover:shadow-md border-border dark:border-foreground/10 group hover:border-primary/20 dark:hover:border-primary/30 bg-card">
+              <Card className="relative z-10 p-6 h-full transition-all duration-300 hover:shadow-md hover:z-20 border-border dark:border-foreground/10 group hover:border-primary/20 dark:hover:border-primary/30 bg-card">
                 <div className="p-3 bg-primary/10 rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <edge.icon className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
                 </div>
@@ -372,7 +394,7 @@ const Index = () => {
       <ContentSection
         title="Programs for Every Stage"
         description="Choose the acceleration program that matches your startup's current stage"
-        className="max-w-full  mx-auto mt-24"
+        className="max-w-full mx-auto mt-24"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {programs.map((program, index) => (
@@ -385,7 +407,7 @@ const Index = () => {
               className="group"
             >
               <Card className={`p-1 h-full bg-gradient-to-br ${program.color} overflow-hidden transition-all duration-500 hover:shadow-xl`}>
-                <div className="flex flex-col h-full bg-card/80 dark:bg-card/90 backdrop-blur-sm rounded-[11px] p-6 border ${program.borderColor}">
+                <div className={`flex flex-col h-full bg-card/80 dark:bg-card/90 backdrop-blur-sm rounded-[11px] p-6 border ${program.borderColor}`}>
                   <div className="mb-6">
                     <div className={`inline-flex items-center rounded-full ${program.bgColor} ${program.textColor} px-3 py-1 text-xs font-medium mb-4`}>
                       {program.duration}
@@ -431,7 +453,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 dark:from-primary dark:to-primary/70" />
 
           {/* Subtle pattern overlay */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRo=" />
+          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRo')]" />
 
           {/* Animated elements */}
           <div className="absolute top-1/4 -left-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse-slow" />

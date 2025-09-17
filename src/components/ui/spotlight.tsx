@@ -4,13 +4,19 @@ import { cn } from "@/lib/utils";
 type SpotlightProps = {
   className?: string;
   fill?: string;
+  lightMode?: boolean;
 };
 
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+export const Spotlight = ({ className, fill, lightMode = false }: SpotlightProps) => {
+  // Determine the appropriate fill color and opacity based on mode
+  const spotlightFill = fill || (lightMode ? "black" : "white");
+  const fillOpacity = lightMode ? "0.08" : "0.21";
+
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
+        "animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0",
+        lightMode ? "mix-blend-multiply" : "mix-blend-screen",
         className
       )}
       xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +30,8 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           rx="1924.71"
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-          fill={fill || "white"}
-          fillOpacity="0.21"
+          fill={spotlightFill}
+          fillOpacity={fillOpacity}
         ></ellipse>
       </g>
       <defs>

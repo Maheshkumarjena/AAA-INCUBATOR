@@ -2,6 +2,7 @@ import { Bell, Search, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
+import { ThemeToggle } from '../ui/theme-toggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,6 +33,8 @@ export function TopNavigation() {
           
           <div className="flex items-center space-x-2 ml-auto">
             {/* Quick Apply Button */}
+                      <ThemeToggle />
+
             <Button size="sm" className="btn-accent hidden md:flex">
               Quick Apply
             </Button>

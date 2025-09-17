@@ -230,8 +230,12 @@ const Index = () => {
         <MouseSpotlight />
         <MouseSpotlight />
 
-        <Spotlight className="-top-40 left-0 md:-top-[400px] md:left-60" fill={isLightMode ? "black" : "white"} lightMode={isLightMode} />
+        <Spotlight className="-top-40 left-0 md:-top-[300px] md:left-60" fill={isLightMode ? "black" : "white"} lightMode={isLightMode} />
         
+        <Spotlight className="top-0 left-0" fill="black" lightMode={true} />
+        
+
+
         <Spotlight className="" fill={isLightMode ? "black" : "white"} lightMode={isLightMode} />
         <FullWidthGridPattern />
         

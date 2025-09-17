@@ -75,7 +75,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+       animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+      },
       keyframes: {
+        spotlight: {
+          '0%': { opacity: '0', transform: 'translate3d(0,0,0) scale(1)' },
+          '10%': { opacity: '1' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0', transform: 'translate3d(-10%, -10%, 0) scale(1.05)' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -118,6 +127,7 @@ export default {
         }
       },
       animation: {
+        spotlight: 'spotlight 2.4s ease-out forwards',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out",

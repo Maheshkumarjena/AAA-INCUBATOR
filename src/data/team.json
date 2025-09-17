@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Chen",
+    "role": "CEO & Founder",
+    "avatar": "/api/placeholder/120/120",
+    "bio": "Former VP at Google Ventures with 15+ years in startup acceleration. Led investments in 50+ companies with combined valuation of $2B+. Passionate about empowering diverse entrepreneurs and building sustainable innovation ecosystems.",
+    "linkedin": "https://linkedin.com/in/sarah-chen",
+    "badge": "Founder"
+  },
+  {
+    "id": "2", 
+    "name": "Marcus Rodriguez",
+    "role": "CTO & Co-Founder",
+    "avatar": "/api/placeholder/120/120",
+    "bio": "Serial entrepreneur and tech architect. Previously founded two successful SaaS companies (acquired by Salesforce and Adobe). Expert in scalable infrastructure and AI/ML applications for early-stage startups.",
+    "linkedin": "https://linkedin.com/in/marcus-rodriguez",
+    "badge": "Founder"
+  },
+  {
+    "id": "3",
+    "name": "Dr. Amira Hassan",
+    "role": "Head of Programs",
+    "avatar": "/api/placeholder/120/120", 
+    "bio": "PhD in Innovation Management from MIT. Former program director at Techstars and Y Combinator. Designed curriculum for 200+ startups with 85% graduation rate. Specializes in product-market fit acceleration.",
+    "linkedin": "https://linkedin.com/in/amira-hassan",
+    "badge": "Leadership"
+  },
+  {
+    "id": "4",
+    "name": "James Park",
+    "role": "Investment Director", 
+    "avatar": "/api/placeholder/120/120",
+    "bio": "20+ years in venture capital and private equity. Previously Managing Director at Sequoia Capital. Led Series A-C rounds totaling $500M+. Expert in fintech, healthtech, and deep tech verticals.",
+    "linkedin": "https://linkedin.com/in/james-park-vc",
+    "badge": "Leadership"
+  },
+  {
+    "id": "5",
+    "name": "Lisa Wang",
+    "role": "Mentor & Advisor",
+    "avatar": "/api/placeholder/120/120",
+    "bio": "Founder & former CEO of TechFlow (acquired by Microsoft for $1.2B). Angel investor in 30+ startups. Board member at Women in Tech Foundation. Focuses on scaling operations and international expansion.",
+    "linkedin": "https://linkedin.com/in/lisa-wang-founder", 
+    "badge": "Advisor"
+  },
+  {
+    "id": "6",
+    "name": "David Kim",
+    "role": "Startup Success Manager",
+    "avatar": "/api/placeholder/120/120",
+    "bio": "Former startup founder with 2 successful exits. Now helps early-stage companies navigate growth challenges. Expert in customer acquisition, team building, and fundraising strategies. Mentored 100+ founders.",
+    "linkedin": "https://linkedin.com/in/david-kim-mentor",
+    "badge": "Mentor"
+  }
+]

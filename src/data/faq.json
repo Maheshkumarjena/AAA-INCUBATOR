@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "question": "What types of startups does InnovateHub accept?",
+    "answer": "We accept startups across all industries, but we have particular expertise in tech, fintech, healthtech, and sustainability. We look for teams with a strong founding team, clear market opportunity, and potential for significant growth. Applications are welcome from pre-seed to Series A stage companies."
+  },
+  {
+    "id": "2", 
+    "question": "How long is the accelerator program?",
+    "answer": "Our flagship accelerator program runs for 12 weeks. The first 8 weeks focus on intensive mentorship, product development, and go-to-market strategy. The final 4 weeks prepare you for demo day and investor presentations. We also offer extended 6-month programs for more complex ventures."
+  },
+  {
+    "id": "3",
+    "question": "What equity stake does InnovateHub take?",
+    "answer": "We typically take 6-8% equity in exchange for our investment and program participation. This is competitive with top-tier accelerators globally. The exact amount depends on your stage, funding needs, and program track (standard vs. advanced)."
+  },
+  {
+    "id": "4",
+    "question": "How much funding do startups receive?",
+    "answer": "Standard program participants receive $100K-$250K in initial funding. Our advanced track provides $250K-$500K for later-stage startups. Additionally, we facilitate connections with our network of 200+ investors for follow-on rounds, with alumni raising an average of $2M+ post-program."
+  },
+  {
+    "id": "5",
+    "question": "Can international startups apply?",
+    "answer": "Absolutely! We welcome applications from founders worldwide. We provide visa support and relocation assistance for international teams. About 40% of our cohort consists of international startups, and we have dedicated programs for global expansion."
+  },
+  {
+    "id": "6",
+    "question": "What happens after the program ends?",
+    "answer": "Our support continues long after demo day. Alumni get lifetime access to our mentor network, investor connections, and peer community. We provide ongoing advisory support, follow-on funding opportunities, and access to our corporate partnership network. We track and support our companies for 5+ years post-graduation."
+  },
+  {
+    "id": "7", 
+    "question": "Do I need a technical co-founder to apply?",
+    "answer": "While not strictly required, having a technical co-founder significantly strengthens your application, especially for tech startups. If you don't have one, we can help you find technical talent through our founder matching program and developer network."
+  },
+  {
+    "id": "8",
+    "question": "What is the application process and timeline?",
+    "answer": "Applications open quarterly with rolling admissions. The process includes: online application (2 weeks to review), video interview (1 week), in-person pitch session (1 week), and final decision (1 week). We recommend applying 6-8 weeks before your preferred start date."
+  },
+  {
+    "id": "9",
+    "question": "Is there any cost to participate in the program?",
+    "answer": "There are no upfront fees to participate. Our investment covers program costs, and we only succeed when you succeed. Some startups choose to relocate to our hub city, and we provide stipends to help with living expenses during the program."
+  },
+  {
+    "id": "10",
+    "question": "What makes InnovateHub different from other accelerators?",
+    "answer": "Our unique combination of hands-on mentorship, global network, and post-program support sets us apart. We maintain smaller cohorts (8-12 companies) for personalized attention, have a 85% success rate, and our alumni companies have achieved a combined valuation of $2B+. We also focus heavily on sustainable growth and social impact."
+  }
+]

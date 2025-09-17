@@ -1,0 +1,54 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "team": "Équipe",
+    "portfolio": "Portfolio", 
+    "programs": "Programmes",
+    "apply": "Postuler",
+    "resources": "Ressources",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "jobs": "Emplois",
+    "getInvolved": "Participer",
+    "login": "Connexion", 
+    "signUp": "S'inscrire"
+  },
+  "hero": {
+    "title": "Accélérez votre Parcours Entrepreneurial",
+    "subtitle": "Rejoignez la prochaine génération d'entrepreneurs à succès avec notre programme d'incubation complet",
+    "primaryCTA": "Postuler Maintenant",
+    "secondaryCTA": "En Savoir Plus",
+    "joinMentor": "Devenir Mentor", 
+    "exploreStartups": "Explorer les Startups"
+  },
+  "common": {
+    "readMore": "Lire Plus",
+    "readLess": "Lire Moins",
+    "viewAll": "Voir Tout",
+    "learnMore": "En Savoir Plus",
+    "getStarted": "Commencer",
+    "contactUs": "Nous Contacter",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès", 
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier", 
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "clearFilters": "Effacer les Filtres",
+    "showingResults": "Affichage de {{count}} résultats",
+    "noResults": "Aucun résultat trouvé"
+  },
+  "footer": {
+    "mission": "Responsabiliser la prochaine génération d'innovateurs mondiaux grâce à des programmes d'incubation et de mentorat complets.",
+    "quickLinks": "Liens Rapides",
+    "stayUpdated": "Restez Informé",
+    "enterEmail": "Entrez votre email",
+    "subscribe": "S'abonner",
+    "contact": "Contact", 
+    "copyright": "© 2024 InnovateHub. Tous droits réservés."
+  }
+}

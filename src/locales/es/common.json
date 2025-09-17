@@ -1,0 +1,54 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "team": "Equipo", 
+    "portfolio": "Portafolio",
+    "programs": "Programas",
+    "apply": "Aplicar",
+    "resources": "Recursos",
+    "blog": "Blog",
+    "faq": "Preguntas Frecuentes",
+    "jobs": "Empleos",
+    "getInvolved": "Participa",
+    "login": "Iniciar Sesión",
+    "signUp": "Registrarse"
+  },
+  "hero": {
+    "title": "Acelera tu Viaje Empresarial",
+    "subtitle": "Únete a la próxima generación de emprendedores exitosos con nuestro programa integral de incubación",
+    "primaryCTA": "Aplicar Ahora", 
+    "secondaryCTA": "Saber Más",
+    "joinMentor": "Ser Mentor",
+    "exploreStartups": "Explorar Startups"
+  },
+  "common": {
+    "readMore": "Leer Más",
+    "readLess": "Leer Menos",
+    "viewAll": "Ver Todo",
+    "learnMore": "Saber Más", 
+    "getStarted": "Comenzar",
+    "contactUs": "Contáctanos",
+    "loading": "Cargando...",
+    "error": "Error", 
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clearFilters": "Limpiar Filtros",
+    "showingResults": "Mostrando {{count}} resultados",
+    "noResults": "No se encontraron resultados"
+  },
+  "footer": {
+    "mission": "Empoderando a la próxima generación de innovadores globales a través de programas integrales de incubación y mentoría.",
+    "quickLinks": "Enlaces Rápidos",
+    "stayUpdated": "Mantente Actualizado",
+    "enterEmail": "Ingresa tu correo",
+    "subscribe": "Suscribirse", 
+    "contact": "Contacto",
+    "copyright": "© 2024 InnovateHub. Todos los derechos reservados."
+  }
+}

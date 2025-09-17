@@ -1,0 +1,131 @@
+[
+  {
+    "id": "1",
+    "title": "Demo Day - Spring 2024 Cohort",
+    "description": "Join us for our Spring 2024 cohort's demo day featuring 12 innovative startups presenting their solutions to investors and industry experts.",
+    "date": "2024-12-15",
+    "time": "2:00 PM - 6:00 PM PST",
+    "location": "InnovateHub Auditorium, San Francisco",
+    "type": "Demo Day",
+    "isDemoDay": true,
+    "featured": true,
+    "capacity": 200,
+    "registered": 156,
+    "speakers": ["Sarah Chen", "Marcus Rodriguez", "Dr. Amira Hassan"],
+    "agenda": [
+      "2:00 PM - Registration & Networking",
+      "2:30 PM - Welcome & Opening Remarks",
+      "3:00 PM - Startup Presentations (Round 1)",
+      "4:30 PM - Coffee Break & Networking",
+      "5:00 PM - Startup Presentations (Round 2)", 
+      "6:00 PM - Closing & Investor Mixer"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Founder Masterclass: Fundraising Strategies",
+    "description": "Learn proven fundraising strategies from successful entrepreneurs and investors. Topics include pitch deck optimization, investor relations, and term sheet negotiations.",
+    "date": "2024-12-20",
+    "time": "6:00 PM - 8:00 PM PST",
+    "location": "Virtual Event",
+    "type": "Workshop",
+    "isDemoDay": false,
+    "featured": false,
+    "capacity": 100,
+    "registered": 87,
+    "speakers": ["James Park", "Lisa Wang"],
+    "agenda": [
+      "6:00 PM - Welcome & Introductions",
+      "6:15 PM - Fundraising Fundamentals",
+      "6:45 PM - Pitch Deck Best Practices",
+      "7:15 PM - Q&A Session",
+      "7:45 PM - Networking Breakout Rooms"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "AI & Machine Learning in Startups",
+    "description": "Explore how AI and ML are transforming startup ecosystems. Panel discussion with founders who have successfully integrated AI into their products.",
+    "date": "2025-01-10",
+    "time": "7:00 PM - 9:00 PM PST", 
+    "location": "Tech Hub, Austin",
+    "type": "Panel Discussion",
+    "isDemoDay": false,
+    "featured": true,
+    "capacity": 80,
+    "registered": 34,
+    "speakers": ["Dr. Amira Hassan", "Marcus Rodriguez"],
+    "agenda": [
+      "7:00 PM - Registration",
+      "7:15 PM - Panel Introduction",
+      "7:30 PM - AI Implementation Stories",
+      "8:15 PM - Audience Q&A",
+      "8:45 PM - Networking Reception"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Demo Day - Winter 2025 Cohort",
+    "description": "Experience the culmination of our Winter 2025 program with 10 groundbreaking startups showcasing their innovations across fintech, healthtech, and sustainability.",
+    "date": "2025-03-20",
+    "time": "1:00 PM - 5:00 PM PST",
+    "location": "Innovation Center, New York",
+    "type": "Demo Day", 
+    "isDemoDay": true,
+    "featured": true,
+    "capacity": 250,
+    "registered": 89,
+    "speakers": ["Sarah Chen", "James Park", "Lisa Wang"],
+    "agenda": [
+      "1:00 PM - Registration & Welcome Lunch",
+      "1:45 PM - Opening Keynote",
+      "2:15 PM - Startup Pitches (Block 1)",
+      "3:30 PM - Networking Break",
+      "4:00 PM - Startup Pitches (Block 2)",
+      "4:45 PM - Awards & Closing Ceremony"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Women in Tech Leadership Summit",
+    "description": "Celebrating women leaders in technology and entrepreneurship. Featuring inspiring talks, mentorship opportunities, and networking sessions.",
+    "date": "2025-01-25",
+    "time": "9:00 AM - 5:00 PM PST",
+    "location": "Convention Center, San Francisco",
+    "type": "Summit",
+    "isDemoDay": false,
+    "featured": true,
+    "capacity": 300,
+    "registered": 267,
+    "speakers": ["Lisa Wang", "Dr. Amira Hassan", "Sarah Chen"],
+    "agenda": [
+      "9:00 AM - Registration & Breakfast",
+      "9:30 AM - Opening Keynote",
+      "10:30 AM - Leadership Panel",
+      "12:00 PM - Networking Lunch",
+      "1:30 PM - Breakout Sessions",
+      "4:00 PM - Closing Fireside Chat"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Startup Legal Workshop",
+    "description": "Essential legal knowledge for early-stage startups. Covers incorporation, IP protection, employment law, and investor agreements.",
+    "date": "2025-02-05",
+    "time": "6:30 PM - 8:30 PM PST",
+    "location": "Virtual Event",
+    "type": "Workshop",
+    "isDemoDay": false,
+    "featured": false,
+    "capacity": 75,
+    "registered": 52,
+    "speakers": ["External Legal Expert", "James Park"],
+    "agenda": [
+      "6:30 PM - Welcome",
+      "6:45 PM - Incorporation Basics",
+      "7:15 PM - IP & Patents",
+      "7:45 PM - Investor Documents",
+      "8:15 PM - Q&A Wrap-up"
+    ]
+  }
+]

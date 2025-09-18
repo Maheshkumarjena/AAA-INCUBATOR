@@ -81,7 +81,7 @@ export function AppSidebar() {
             </div>
             {!collapsed && (
               <div>
-                <h2 className="font-bold text-md text-primary">AAA INCUBATOR</h2>
+                <h2 className="font-bold text-md text-primary">INCUBATOR</h2>
                 <p className="text-xs text-muted-foreground">Startup Accelerator</p>
               </div>
             )}

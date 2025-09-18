@@ -95,7 +95,7 @@ export async function getChatResponse(message: string): Promise<ChatResponse> {
   } catch (error) {
     console.error('Chat API error:', error);
     return {
-      response: 'I apologize, but I\'m having trouble processing your request right now. Please try again or contact our support team directly at hello@AAA INCUBATOR.com.',
+      response: 'I apologize, but I\'m having trouble processing your request right now. Please try again or contact our support team directly at hello@INCUBATOR.com.',
       confidence: 0
     };
   }

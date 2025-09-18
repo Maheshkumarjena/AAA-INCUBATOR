@@ -22,14 +22,14 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-primary z-[1000] text-primary-foreground">
+    <footer className="bg-primary  text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Mission */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Rocket className="h-8 w-8 text-accent" />
-              <span className="text-2xl font-bold">AAA INCUBATOR</span>
+              <span className="text-2xl font-bold">INCUBATOR</span>
             </div>
             <p className="text-primary-foreground/80 max-w-xs">
               Empowering the next generation of global innovators through 
@@ -86,7 +86,7 @@ export function Footer() {
               <div className="space-y-2 text-sm text-primary-foreground/80">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>hello@AAA INCUBATOR.com</span>
+                  <span>hello@INCUBATOR.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-          <p>&copy; 2024 AAA INCUBATOR. All rights reserved.</p>
+          <p>&copy; 2024 INCUBATOR. All rights reserved.</p>
         </div>
       </div>
     </footer>

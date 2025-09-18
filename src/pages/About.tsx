@@ -42,7 +42,7 @@ export default function About() {
     //         className="text-center mb-16"
     //       >
     //         <h1 className="text-4xl md:text-6xl font-bold text-gradient-primary mb-6">
-    //           About AAA INCUBATOR
+    //           About INCUBATOR
     //         </h1>
     //         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
     //           We accelerate early-stage startups solving real-world problems through 
@@ -66,7 +66,7 @@ export default function About() {
     //               proper guidance, resources, and strategic support.
     //             </p>
     //             <p>
-    //               AAA INCUBATOR was born from the belief that with the right combination of mentorship, 
+    //               INCUBATOR was born from the belief that with the right combination of mentorship, 
     //               funding, and global network access, any determined entrepreneur can build solutions 
     //               that create lasting impact and become engines of prosperity.
     //             </p>

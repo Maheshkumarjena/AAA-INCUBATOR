@@ -60,7 +60,7 @@ export function Navigation() {
                 <div className="absolute inset-0 bg-accent/20 rounded-full scale-0 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <span className="text-xl font-bold text-gradient-primary">
-                AAA INCUBATOR
+                INCUBATOR
               </span>
             </Link>
 

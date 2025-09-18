@@ -48,7 +48,7 @@ export default function Apply() {
     //         transition={{ duration: 0.8 }}
     //       >
     //         <h1 className="text-4xl md:text-5xl font-bold text-gradient-primary mb-6">
-    //           Apply to AAA INCUBATOR
+    //           Apply to INCUBATOR
     //         </h1>
     //         <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
     //           Take the first step towards accelerating your startup journey

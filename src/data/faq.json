@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "question": "What types of startups does AAA INCUBATOR accept?",
+    "question": "What types of startups does INCUBATOR accept?",
     "answer": "We accept startups across all industries, but we have particular expertise in tech, fintech, healthtech, and sustainability. We look for teams with a strong founding team, clear market opportunity, and potential for significant growth. Applications are welcome from pre-seed to Series A stage companies."
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "id": "3",
-    "question": "What equity stake does AAA INCUBATOR take?",
+    "question": "What equity stake does INCUBATOR take?",
     "answer": "We typically take 6-8% equity in exchange for our investment and program participation. This is competitive with top-tier accelerators globally. The exact amount depends on your stage, funding needs, and program track (standard vs. advanced)."
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "id": "10",
-    "question": "What makes AAA INCUBATOR different from other accelerators?",
+    "question": "What makes INCUBATOR different from other accelerators?",
     "answer": "Our unique combination of hands-on mentorship, global network, and post-program support sets us apart. We maintain smaller cohorts (8-12 companies) for personalized attention, have a 85% success rate, and our alumni companies have achieved a combined valuation of $2B+. We also focus heavily on sustainable growth and social impact."
   }
 ]

@@ -10,7 +10,7 @@ interface ContentSectionProps {
 
 export function ContentSection({ children, className, title, description }: ContentSectionProps) {
   return (
-    <section className={cn('space-y-6', className)}>
+    <section className={cn('relative z-10 space-y-6', className)}>
       {(title || description) && (
         <div className="space-y-2">
           {title && (

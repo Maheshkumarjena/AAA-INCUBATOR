@@ -17,6 +17,16 @@
   }
 }
 
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* If you're using a class-based theme system */
 .light {
   --spotlight-default: black;

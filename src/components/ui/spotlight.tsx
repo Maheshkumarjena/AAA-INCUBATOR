@@ -15,7 +15,7 @@ export const Spotlight = ({ className, fill, lightMode = false }: SpotlightProps
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1] h-[199%] w-[138%] lg:w-[84%] opacity-0",
+        "animate-spotlight pointer-events-none absolute z-0 h-[199%] w-[138%] lg:w-[84%] opacity-0",
         lightMode ? "mix-blend-multiply" : "mix-blend-screen",
         className
       )}
